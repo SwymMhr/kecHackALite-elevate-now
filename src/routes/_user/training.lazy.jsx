@@ -3,9 +3,6 @@ import { Box, Stack, Typography, Chip } from '@mui/material'
 import { createLazyFileRoute } from '@tanstack/react-router'
 import { training } from '@/lib/Databases/training'
 export const Route = createLazyFileRoute('/_user/training')({
-  beforeLoad: () => {
-    console.log('Funding')
-  },
   component: RouteComponent,
 })
 
@@ -82,7 +79,7 @@ function RouteComponent() {
       <Box sx={boxStyle}>
         {training.map((training) => {
           return (
-            <Cards title={training.title} type={capitalize(training.eventType)} price={'Date: ' + training.startingDate} description={training.description} buttonText="View" />
+            <Cards title={training.title} type={capitalize(training.eventType)} price={'Date: ' + training.startingDate} description={training.description} buttonText="Join Course" />
           )
         })}
       </Box>
