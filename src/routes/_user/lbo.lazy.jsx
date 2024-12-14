@@ -81,6 +81,7 @@ function RouteComponent() {
             price={"Asked On: "+lbo.date}
             description={lbo.excerpt}
             buttonText="View Request"
+            link="https://api.whatsapp.com/send/?phone=9800000002&text&type=phone_number&app_absent=0"
           />
         ))
       }
