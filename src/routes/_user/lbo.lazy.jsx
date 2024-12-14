@@ -2,12 +2,9 @@ import Cards from "@/components/Card/Cards";
 import { Box, Chip, Stack, Typography } from "@mui/material";
 import { createLazyFileRoute } from "@tanstack/react-router";
 import { localBusinessOwners } from "@/lib/Databases/lbo";
-
+import { user } from "@/lib/Databases/user";
 
 export const Route = createLazyFileRoute("/_user/lbo")({
-  beforeLoad: () => {
-    console.log("Expert");
-  },
   component: RouteComponent,
 });
 
@@ -15,6 +12,7 @@ function RouteComponent() {
   const capitalize = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+
   const localBusinessOwnerTypes = [
     {
       name: "Small",
@@ -82,6 +80,7 @@ function RouteComponent() {
             description={lbo.excerpt}
             buttonText="Contact Now"
             link="https://api.whatsapp.com/send/?phone=9800000002&text&type=phone_number&app_absent=0"
+
           />
         ))
       }

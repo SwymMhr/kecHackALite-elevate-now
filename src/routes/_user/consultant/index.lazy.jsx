@@ -143,8 +143,11 @@ function RouteComponent() {
                   {capitalize(datum.userField)}
                 </TableCell>
                 <TableCell align="right">
-                  <Button variant="contained" sx={{ backgroundColor: "#01311e", color: "#fff", fontSize: ".8rem", padding: "5px 10px", borderRadius: "5px" }}>
-                    View Profile
+                  <Button variant="contained" sx={{ backgroundColor: "#01311e", color: "#fff", fontSize: ".8rem", padding: "5px 10px", borderRadius: "5px" }} onClick={() =>{
+                    const link = `https://api.whatsapp.com/send/?phone=${datum.contact}&text&type=phone_number&app_absent=0`
+                    window.open(link, "_blank")
+                  }}>
+                    Chat Now
                   </Button>
                 </TableCell>
               </TableRow>

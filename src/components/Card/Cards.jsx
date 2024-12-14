@@ -8,7 +8,7 @@ import {
   Button,
 } from "@mui/material";
 import { Link } from "@tanstack/react-router";
-const Cards = ({title, price, type, description, buttonText}) => {
+const Cards = ({title, price, type, description, buttonText, link=null}) => {
   return (
     <>
       <Card
@@ -63,7 +63,7 @@ const Cards = ({title, price, type, description, buttonText}) => {
               <Typography variant="body1" component="div" sx={{ color: "#01311e" }}>
                 {price}
               </Typography>
-              <Link to="">
+              <Link to={link}>
               <Button variant="contained" sx={{ backgroundColor: "#01311e", color: "#fff", fontSize: ".8rem", padding: "5px 10px", borderRadius: "5px" }}>
                 {buttonText}
               </Button>
